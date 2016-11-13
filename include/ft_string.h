@@ -31,6 +31,8 @@ char	*ft_strmapi(const char *string, char (*func)(unsigned int, char));
 int		ft_strnequ(const char *string1, const char *string2, size_t n);
 char	*ft_strnew(size_t length);
 char	**ft_strsplit(const char *string, char delimiter);
+
+char	*ft_strctrim(const char *string, char trim);
 char	*ft_strtrim(const char *string);
 
 /*
@@ -45,6 +47,7 @@ size_t	ft_struntils(const char *string, const char *substring);
 size_t	ft_strluntil(const char *string, char c, size_t limit);
 //size_t	ft_strluntils(const char *string, const char *substring, size_t limit);
 
+char	*ft_strrep(const char *string, const char *find, const char *replace);
 void	ft_strrev(char *string);
 char	*ft_strrevdup(const char *string);
 

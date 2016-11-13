@@ -23,7 +23,7 @@ static char		*g_fingerprints[19] =
 	"#....#....##",
 	"#..###",
 	"##..##",
-	"#...##...#".
+	"#...##...#",
 	"##....#",
 	"#....##....#",
 	"##..##",
@@ -39,7 +39,7 @@ static char		*g_fingerprints[19] =
 ** Validates a given buffer against a list of 19 viable tetra fingerprints.
 */
 
-int				is_valid_buffer(char *buffer)
+int				validate_buffer(char *buffer)
 {
 	char		*replaced;
 	char		*trimmed;

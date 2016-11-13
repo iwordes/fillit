@@ -22,6 +22,7 @@
 ** Room for optimizations:
 ** - ft_strlen is run twice on both find and replace, once in each function.
 **   However, ft_strrep is already 25 lines long.
+** - There is 1 removable line: 23
 */
 
 
@@ -49,7 +50,7 @@ static size_t	get_final_size(const char *string, const char *find,
 }
 
 char			*ft_strrep(const char *string, const char *find,
-												const char *replace)
+							const char *replace)
 {
 	char		*newstring;
 	size_t		i;

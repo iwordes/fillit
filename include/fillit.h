@@ -41,15 +41,15 @@ typedef struct	s_tetra
 }				t_tetra;
 
 t_tetra			*init_tetras(int fd);
-t_tetra			*create_tetra(char buffer[4][5]);
-void			validate_tetra(t_tetra *tetra);
+int				validate_buffer(char *buffer);
+void			create_tetra(const char buffer[4][5], t_tetra *tetra, int t);
 void			align_tetra(t_tetra *tetra);
 
 void			overfill(t_tetra *tetras);
 void			fillit(t_map map, t_tetra *tetra);
 t_map			place(int x, int y, t_map map, t_tetra *tetra);
 
-void			success(t_map solved);
-void			failure(void);
+void			done(t_map solved);
+void			fail(void);
 
 #endif

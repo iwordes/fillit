@@ -157,7 +157,7 @@ OBJ       := $(addsuffix .o,$(addprefix $(OBJDIR)/,$(INPUTS)))
 BIN       := $(OUTDIR)/$(NAME).a
 
 .PHONY: all
-all: $(NAME) filecheck
+all: $(NAME)
 
 .PHONY: clean
 clean:
@@ -167,16 +167,6 @@ clean:
 .PHONY: fclean
 fclean: clean
 	rm -f $(BIN)
-
-.PHONY: filecheck
-filecheck:
-	@echo --- Checking for missed sources ---
-	@-for source in $(SRCDIR)/*.c; do\
-		if [ ! "$(SRC)" == *$$source* ]; then\
-			echo "Warning: $$source is not included.";\
-		fi;\
-	done
-	@echo --- Check complete ---
 
 .PHONY: re
 re: fclean all

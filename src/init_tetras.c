@@ -25,7 +25,7 @@ t_tetra				*init_tetras(int fd)
 		FAILIF(bytes < 20 || (bytes == 21 && buffer[20] != '\n')
 			|| buffer[4] != '\n' || buffer[9] != '\n'
 			|| buffer[14] != '\n' || buffer[19] != '\n'
-			|| !is_valid_buffer(buffer));
+			|| !validate_buffer(buffer));
 		create_tetra((char (*)[5])buffer, tetras + t, t);
 		align_tetra(tetras + t);
 		t++;
