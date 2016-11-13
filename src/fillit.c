@@ -34,8 +34,8 @@ void		fillit(t_map map, t_tetra *tetra)
 		{
 			if (map.grid[y][x] == 0)
 				fillit(place(x, y, map, tetra), tetra + 1);
-			x++;
+			x += 1;
 		}
-		y++;
+		y += 1;
 	}
 }
