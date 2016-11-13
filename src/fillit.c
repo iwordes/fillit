@@ -31,7 +31,8 @@ void		fillit(t_map map, t_tetra *tetra)
 	{
 		x = 0;
 		while (x < map.size)
-			fillit(place(x++, y, map, tetra), tetra + 1);
+			if (map[y][x] == 0)
+				fillit(place(x++, y, map, tetra), tetra + 1);
 		y++;
 	}
 }
