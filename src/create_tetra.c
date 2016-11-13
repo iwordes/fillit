@@ -30,8 +30,6 @@ void		create_tetra(const char buffer[4][5], t_tetra *tetra, int t)
 		x = 0;
 		while (x < 4)
 		{
-			// NOTE: REDUNDANT
-			FAILIF(buffer[y][x] != '.' && buffer[y][x] != '#');
 			if (buffer[y][x] == '#')
 			{
 				FAILIF(b > 3);
