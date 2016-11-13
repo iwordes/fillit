@@ -12,7 +12,7 @@ CFLAGS   := -Wall -Wextra -Werror -I $(INCDIR) -L $(LIBDIR) -l ft
 
 CMP      := $(COMPILER) $(CFLAGS)
 
-INPUTS   := align_tetra create_tetra done fail fillit init_tetras is_valid_buffer main overfill place
+INPUTS   := align_tetra create_tetra done fail fillit init_tetras validate_buffer main overfill place
 OUTPUTS  := fillit
 
 SRC      := $(addsuffix .c,$(addprefix $(SRCDIR)/,$(INPUTS)))
