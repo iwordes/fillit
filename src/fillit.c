@@ -19,8 +19,8 @@
 
 void		fillit(t_map map, t_tetra *tetra)
 {
-	char	x;
-	char	y;
+	int		x;
+	int		y;
 
 	if (map.size == 0)
 		return ;
