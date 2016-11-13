@@ -27,7 +27,8 @@ t_map		place(int x, int y, t_map map, t_tetra *tetra)
 	{
 		real_x = x + tetra->block[b].x;
 		real_y = y + tetra->block[b].y;
-		if (map.grid[real_y][real_x] == 0)
+		if (map.grid[real_y][real_x] == 0
+		&& real_x < map.size && real_y < map.size)
 			map.grid[real_y][real_x] = tetra->letter;
 		else
 		{
