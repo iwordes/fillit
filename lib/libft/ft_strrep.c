@@ -52,10 +52,10 @@ static size_t	get_final_size(const char *string, const char *find,
 char			*ft_strrep(const char *string, const char *find,
 							const char *replace)
 {
-	char		*newstring;
 	size_t		i;
 	size_t		fl;
 	size_t		rl;
+	char		*newstring;
 
 	if (string == NULL || find == NULL || replace == NULL)
 		return (NULL);
