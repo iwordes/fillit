@@ -6,7 +6,7 @@
 /*   By: iwordes <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 15:43:12 by iwordes           #+#    #+#             */
-/*   Updated: 2016/11/10 15:49:48 by iwordes          ###   ########.fr       */
+/*   Updated: 2016/11/16 15:53:59 by iwordes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_tetra				*init_tetras(int fd)
 	int				t;
 
 	t = 0;
-	while ((bytes = read(fd, buffer, 21)) != 20)
+	while ((bytes = read(fd, buffer, 21)) > 0)
 	{
 		FAILIF(bytes < 20 || (bytes == 21 && buffer[20] != '\n')
 			|| buffer[4] != '\n' || buffer[9] != '\n'
@@ -29,6 +29,8 @@ t_tetra				*init_tetras(int fd)
 		create_tetra((char (*)[5])buffer, tetras + t, t);
 		align_tetra(tetras + t);
 		t++;
+		if (bytes == 20)
+			break ;
 	}
 	FAILIF(t == 0 || bytes < 0);
 	tetras[t].letter = 0;

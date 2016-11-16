@@ -6,7 +6,7 @@
 /*   By: iwordes <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 16:01:24 by iwordes           #+#    #+#             */
-/*   Updated: 2016/11/10 19:24:34 by iwordes          ###   ########.fr       */
+/*   Updated: 2016/11/16 15:56:50 by iwordes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,6 @@ int				validate_buffer(char *buffer)
 	while (f < 19)
 	{
 		replaced = ft_strrep(buffer, "\n", ".");
-		if (replaced == NULL)
-			break ;
 		trimmed = ft_strctrim(replaced, '.');
 		if (trimmed == NULL)
 			break ;
