@@ -20,7 +20,7 @@ t_tetra				*init_tetras(int fd)
 	int				t;
 
 	t = 0;
-	while ((bytes = read(fd, buffer, 21)) > 0)
+	while ((bytes = read(fd, buffer, 21)) != 20)
 	{
 		FAILIF(bytes < 20 || (bytes == 21 && buffer[20] != '\n')
 			|| buffer[4] != '\n' || buffer[9] != '\n'
