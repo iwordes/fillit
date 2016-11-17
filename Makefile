@@ -19,22 +19,27 @@ SRC      := $(addsuffix .c,$(addprefix $(SRCDIR)/,$(INPUTS)))
 OUT      := $(addprefix $(OUTDIR)/,$(OUTPUTS))
 
 .PHONY: all
-all: $(OUT)
+all: $(NAME)
+
+$(NAME): $(SRC) $(LIBDIR)/libft.a
+	$(CMP) $(SRC) -o $(NAME)
 
 .PHONY: clean
 clean:
-	@echo No object files were available to be cleaned.
+	rm -f $(OBJDIR)
+	make -C $(LIBDIR)/libft clean
 
 .PHONY: fclean
 fclean: clean
 	rm -f $(OUT)
 	rm -f $(LIBDIR)/libft.a
+	rm -f $(LIBDIR)/libft/libft.a
+	make -C $(LIBDIR)/libft fclean
 
 .PHONY: re
 re: fclean all
 
-$(NAME): $(SRC) $(LIBDIR)/libft.a
-	$(CMP) $(SRC) -o $(NAME)
+
 
 $(LIBDIR)/libft.a:
 	make -C $(LIBDIR)/libft re
