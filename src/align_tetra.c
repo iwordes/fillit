@@ -15,7 +15,7 @@
 /*
 ** Properly aligns any tetra so that it resides in the upper-leftmost corner.
 */
-#include <stdio.h>
+
 void		align_tetra(t_tetra *tetra)
 {
 	t_pt		offset;
