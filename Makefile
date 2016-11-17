@@ -41,4 +41,4 @@ $(NAME): $(SRC) $(LIBDIR)/libft.a
 
 $(LIBDIR)/libft.a:
 	make -C $(LIBDIR)/libft re
-	cp $(LIBDIR)/libft/libft.a $(LIBDIR)/
+	mv $(LIBDIR)/libft/libft.a $(LIBDIR)/
