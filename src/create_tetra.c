@@ -6,7 +6,7 @@
 /*   By: iwordes <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 15:49:54 by iwordes           #+#    #+#             */
-/*   Updated: 2016/11/10 15:58:25 by iwordes          ###   ########.fr       */
+/*   Updated: 2016/11/16 15:58:49 by iwordes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void		create_tetra(const char buffer[4][5], t_tetra *tetra, int t)
 		x = 0;
 		while (x < 4)
 		{
+			FAILIF(buffer[y][x] != '#' && buffer[y][x] != '.');
 			if (buffer[y][x] == '#')
 			{
 				FAILIF(b > 3);
