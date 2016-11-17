@@ -32,10 +32,8 @@ void		align_tetra(t_tetra *tetra)
 	b = 0;
 	while (b < 4)
 	{
-		printf("point %d: %d,%d\n", b, tetra->block[b].x, tetra->block[b].y);
 		tetra->block[b].x -= offset.x;
 		tetra->block[b].y -= offset.y;
-		printf("aligned: %d,%d\n", tetra->block[b].x, tetra->block[b].y);
 		b++;
 	}
 }
