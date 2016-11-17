@@ -21,9 +21,6 @@ OUT      := $(addprefix $(OUTDIR)/,$(OUTPUTS))
 .PHONY: all
 all: $(NAME)
 
-$(NAME): $(SRC) $(LIBDIR)/libft.a
-	$(CMP) $(SRC) -o $(NAME)
-
 .PHONY: clean
 clean:
 	rm -f $(OBJDIR)
@@ -33,13 +30,14 @@ clean:
 fclean: clean
 	rm -f $(OUT)
 	rm -f $(LIBDIR)/libft.a
-	rm -f $(LIBDIR)/libft/libft.a
 	make -C $(LIBDIR)/libft fclean
 
 .PHONY: re
 re: fclean all
 
 
+$(NAME): $(SRC) $(LIBDIR)/libft.a
+	$(CMP) $(SRC) -o $(NAME)
 
 $(LIBDIR)/libft.a:
 	make -C $(LIBDIR)/libft re

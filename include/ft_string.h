@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_string.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iwordes <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/11/16 16:38:51 by iwordes           #+#    #+#             */
+/*   Updated: 2016/11/16 16:47:18 by iwordes          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_STRING_H
 # define FT_STRING_H
 
@@ -45,7 +57,9 @@ size_t	ft_wordcnt(const char *string);
 size_t	ft_struntil(const char *string, char c);
 size_t	ft_struntils(const char *string, const char *substring);
 size_t	ft_strluntil(const char *string, char c, size_t limit);
-//size_t	ft_strluntils(const char *string, const char *substring, size_t limit);
+/*
+** size_t	ft_strluntils
+*/
 
 char	*ft_strrep(const char *string, const char *find, const char *replace);
 void	ft_strrev(char *string);

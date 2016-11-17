@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strssplit.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iwordes <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/11/16 10:54:24 by iwordes           #+#    #+#             */
+/*   Updated: 2016/11/17 10:42:16 by iwordes          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 /*
@@ -63,8 +75,8 @@ char		**ft_strssplit(const char *string, const char *delim)
 	{
 		while (string[i] != 0 && ft_strnequ(string + i, delim, dl))
 			i += dl;
-		if (string[i] != 0 && (substr[s]
-			= ft_strsub(string, i++, ft_struntils(string, delim))) != NULL)
+		if (string[i] != 0 && (substr[s] =
+			ft_strsub(string, i++, ft_struntils(string, delim))) != NULL)
 			return (panic(substr));
 		while (string[i] != 0 && !ft_strnequ(string + i, delim, dl))
 			i++;

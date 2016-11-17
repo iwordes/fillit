@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_io.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iwordes <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/11/16 16:38:42 by iwordes           #+#    #+#             */
+/*   Updated: 2016/11/16 16:47:03 by iwordes          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_IO_H
 # define FT_IO_H
 
@@ -8,29 +20,18 @@
 ** reading from/writing to a file.
 */
 
-typedef struct	s_file
-{
-	size_t		size;
-	char		*content;
-	int			desc;
-}				t_file;
-
-typedef struct	s_dir
-{
-	int			desc;
-	char		*types;
-	void		*contents;
-}				t_dir;
-
 /*
 ** Input
 */
 char	ft_getchar(char *prompt);
-char	*ft_getdline(char *prompt, char delimiter);
-char	*ft_getline(char *prompt);
-void	ft_getline_ltd(char *prompt, char *buffer, size_t limit);
 
-char	*ft_readline(int filedes);
+/*
+** char	*ft_getdline(char *prompt, char delimiter);
+** char	*ft_getline(char *prompt);
+** void	ft_getline_ltd(char *prompt, char *buffer, size_t limit);
+**
+** char	*ft_readline(int filedes);
+*/
 
 /*
 ** Output
@@ -79,10 +80,5 @@ void	ft_putuint_base_fd(unsigned long long integer, int base, int fd);
 */
 void	ft_putnbr(int integer);
 void	ft_putnbr_fd(int integer, int fd);
-
-/*
-** Filesystem
-*/
-
 
 #endif
