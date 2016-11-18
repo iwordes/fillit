@@ -23,7 +23,7 @@ all: $(NAME)
 
 .PHONY: clean
 clean:
-	rm -f $(OBJDIR)
+	@-if [ ! "$(OBJDIR)" == "." ]; then rm -rf $(OBJDIR); fi
 	make -C $(LIBDIR)/libft clean
 
 .PHONY: fclean
@@ -40,5 +40,5 @@ $(NAME): $(SRC) $(LIBDIR)/libft.a
 	$(CMP) $(SRC) -o $(NAME)
 
 $(LIBDIR)/libft.a:
-	make -C $(LIBDIR)/libft re
+	make -C $(LIBDIR)/libft
 	mv $(LIBDIR)/libft/libft.a $(LIBDIR)/
